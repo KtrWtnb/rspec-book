@@ -1,9 +1,8 @@
-describe 'An ideal sandwich' do
-  Sandwich = Struct.new(:taste, :toppings)
+Sandwich = Struct.new(:taste, :toppings)
 
-  def sandwich
-    @sandwich ||= Sandwich.new('delicious', [])
-  end
+describe 'An ideal sandwich' do
+  let(:sandwich) { Sandwich.new('delicious', []) }
+
   it 'is delicious' do
     taste = sandwich.taste
 
