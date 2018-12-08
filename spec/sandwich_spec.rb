@@ -2,7 +2,7 @@ describe 'An ideal sandwich' do
   Sandwich = Struct.new(:taste, :toppings)
 
   def sandwich
-    Sandwich.new('delicious', [])
+    @sandwich ||= Sandwich.new('delicious', [])
   end
   it 'is delicious' do
     taste = sandwich.taste
